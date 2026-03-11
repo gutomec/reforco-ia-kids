@@ -1,0 +1,75 @@
+# BRAIN.yaml — Knowledge Graph Entry Point
+# This file is a POINTER. Keep it under 500 tokens.
+
+identity:
+  name: "Reforço IA Kids"
+  domain: "Educação K-12 brasileira com tutoria por IA"
+  mission: "Democratizar reforço escolar de qualidade para crianças brasileiras usando inteligência artificial"
+  stage: "mvp"
+  north_star: "Melhoria mensurável em notas escolares (delta >= 1 ponto em 30 dias)"
+
+products:
+  - id: "plan-free"
+    name: "Gratuito"
+    price: "R$ 0,00"
+    model: "freemium"
+    status: active
+    features:
+      - "3 exercícios/dia"
+      - "1 matéria"
+      - "Relatório semanal básico"
+    persona: "icp-001"
+
+  - id: "plan-essencial"
+    name: "Essencial"
+    price: "R$ 29,90/mês"
+    model: "subscription"
+    status: active
+    features:
+      - "Exercícios ilimitados"
+      - "Todas as matérias"
+      - "Modo dever de casa"
+      - "Relatórios semanais detalhados"
+      - "Imagens ilustrativas por IA"
+    persona: "icp-001"
+
+  - id: "plan-familia"
+    name: "Família"
+    price: "R$ 49,90/mês"
+    model: "subscription"
+    status: active
+    features:
+      - "Tudo do Essencial"
+      - "Até 3 crianças"
+      - "Modo simulado/prova"
+      - "Relatórios via WhatsApp"
+      - "Dashboard dos pais"
+    persona: "icp-001"
+
+personas:
+  - id: "icp-001"
+    name: "Mãe/Pai Digital"
+    summary: "Pai ou mãe, 25-40 anos, classe B/C, filhos 6-14 anos, busca reforço acessível"
+
+domain:
+  curriculum: "BNCC (Base Nacional Comum Curricular)"
+  grades: "1º ao 9º ano do Ensino Fundamental"
+  subjects:
+    - "Matemática"
+    - "Português"
+    - "Ciências"
+    - "História"
+    - "Geografia"
+
+squad_feeds:
+  - squad: "sales-funnel-masters"
+    provides: "Estratégia de conversão, funil, pricing, copy"
+    path: "../squads/sales-funnel-masters/"
+  - squad: "adaptive-tutor-k12"
+    provides: "Pedagogia adaptativa, BNCC, exercícios, repetição espaçada"
+    path: "../squads/adaptive-tutor-k12/"
+
+paths:
+  products: "entities/products/"
+  personas: "entities/personas/"
+  brand: "entities/brand/"

@@ -1,0 +1,58 @@
+# STATE.yaml — Project State Machine
+# Keep under 1000 tokens. This is a summary, not a document.
+
+project:
+  name: "Reforço IA Kids"
+  id: "RIKIDS-001"
+  status: active
+  phase: "MVP"
+  started: "2026-03-11"
+  target: "2026-05-15"
+
+milestones:
+  - id: "M001"
+    name: "MVP — Fundação"
+    status: active
+    slices:
+      - id: "S01"
+        name: "Foundation"
+        status: active
+        description: "Setup Next.js, Supabase, auth, landing page, basic exercise flow"
+      - id: "S02"
+        name: "Core Tutoring"
+        status: pending
+        description: "Claude API integration, adaptive difficulty, Nano Banana images"
+      - id: "S03"
+        name: "Payments & Launch"
+        status: pending
+        description: "Stripe/Asaas integration, onboarding flow, soft launch"
+
+  - id: "M002"
+    name: "Expansão"
+    status: pending
+    features:
+      - "Modo dever de casa (foto → resolução guiada)"
+      - "Modo simulado/prova"
+      - "Relatórios via WhatsApp"
+      - "Dashboard dos pais"
+
+current:
+  milestone: "M001"
+  slice: "S01"
+  focus: "Project setup, authentication, landing page, database schema"
+
+decisions:
+  path: ".gsd/DECISIONS.md"
+
+next_steps:
+  - "Configurar projeto Next.js 15 com TypeScript strict"
+  - "Configurar Supabase (auth + database + RLS)"
+  - "Criar schema de banco de dados (users, children, exercises, progress)"
+  - "Implementar landing page com A2UI"
+  - "Configurar Vercel deployment"
+
+blockers: []
+
+session:
+  last: null
+  handoff: null
